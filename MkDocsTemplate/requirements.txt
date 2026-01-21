@@ -1,0 +1,57 @@
+# Python dependencies for MkDocs documentation site
+# Install with: pip install -r requirements.txt
+
+# Core MkDocs
+mkdocs>=1.5.3
+
+# Material theme for MkDocs
+# This provides a modern, responsive design with many features
+mkdocs-material>=9.5.0
+
+# Optional plugins for enhanced functionality
+# Uncomment the plugins you want to use
+
+# Git revision date plugin - shows last updated date on pages
+# mkdocs-git-revision-date-localized-plugin>=1.2.0
+
+# Minify plugin - optimizes HTML/CSS/JS for production
+# mkdocs-minify-plugin>=0.8.0
+
+# Awesome pages plugin - simplifies navigation configuration
+# mkdocs-awesome-pages-plugin>=2.9.0
+
+# Redirects plugin - handles URL redirects
+# mkdocs-redirects>=1.2.0
+
+# Versioning with mike
+# mike>=2.0.0
+
+# Additional useful plugins:
+
+# Include markdown plugin - include markdown files within other files
+# mkdocs-include-markdown-plugin>=6.0.0
+
+# Macros plugin - use variables and macros in markdown
+# mkdocs-macros-plugin>=1.0.0
+
+# Mermaid diagrams (if not using built-in superfences)
+# mkdocs-mermaid2-plugin>=1.1.0
+
+# PDF export plugin
+# mkdocs-pdf-export-plugin>=0.5.10
+
+# Social cards plugin (part of material-insiders)
+# mkdocs-material-extensions>=1.3.0
+
+# Search plugin enhancements
+# Uncomment if you need language support beyond English
+# jieba>=0.42.1  # Chinese language support
+# pymdown-extensions>=10.7  # Already included by default, but can be explicit
+
+# Development dependencies (optional, for local development)
+# Uncomment for development
+# mkdocs-live-reload>=1.0.0
+
+# Syntax highlighting
+# Pygments is used for code syntax highlighting
+pygments>=2.17.0

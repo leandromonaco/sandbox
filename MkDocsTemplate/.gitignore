@@ -1,0 +1,59 @@
+# MkDocs specific
+site/
+.cache/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# MkDocs plugins
+.cache/
+htmlcov/
+.coverage
+.pytest_cache/
+
+# Documentation build artifacts
+*.tmp
+.mkdocs_cache/
+
+# OS specific
+Thumbs.db
+.directory
+.Trash-*

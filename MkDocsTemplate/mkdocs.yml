@@ -1,0 +1,227 @@
+# MkDocs configuration file for CLI Tool Documentation
+# For more information see: https://www.mkdocs.org/user-guide/configuration/
+
+# Site Information
+site_name: CLI Tool Docs
+site_url: https://yourusername.github.io/cli-tool/
+site_author: Your Name
+site_description: >-
+  Complete documentation for the CLI Tool - A powerful command-line interface
+  for managing projects, deployments, and more.
+
+# Repository
+repo_name: yourusername/cli-tool
+repo_url: https://github.com/yourusername/cli-tool
+edit_uri: edit/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2024 Your Name
+
+# Theme Configuration
+theme:
+  name: material
+  
+  # Theme Features
+  features:
+    - announce.dismiss                # Dismissible announcements
+    - content.action.edit             # Edit button on pages
+    - content.action.view             # View source button
+    - content.code.annotate           # Code annotation support
+    - content.code.copy               # Copy button for code blocks
+    - content.tabs.link               # Linked content tabs
+    - content.tooltips                # Improved tooltips
+    - header.autohide                 # Auto-hiding header
+    - navigation.expand               # Expand navigation by default
+    - navigation.footer               # Footer navigation
+    - navigation.indexes              # Section index pages
+    - navigation.instant              # Instant loading
+    - navigation.instant.prefetch     # Prefetch pages
+    - navigation.instant.progress     # Show progress indicator
+    - navigation.path                 # Breadcrumb navigation
+    - navigation.sections             # Section navigation
+    - navigation.tabs                 # Top-level tabs
+    - navigation.tabs.sticky          # Sticky navigation tabs
+    - navigation.top                  # Back to top button
+    - navigation.tracking             # Anchor tracking
+    - search.highlight                # Highlight search terms
+    - search.share                    # Share search results
+    - search.suggest                  # Search suggestions
+    - toc.follow                      # Follow table of contents
+    - toc.integrate                   # Integrate ToC into navigation
+  
+  # Color Palette
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  
+  # Typography
+  font:
+    text: Roboto
+    code: Roboto Mono
+  
+  # Logo and Icons
+  icon:
+    logo: material/console
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+  
+  # Favicon
+  favicon: assets/favicon.ico
+  
+  # Language
+  language: en
+
+# Navigation Structure
+# This defines the structure of your documentation site
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Commands:
+      - Overview: commands/init.md
+      - init: commands/init.md
+      - deploy: commands/deploy.md
+      - status: commands/status.md
+  - FAQ: faq.md
+
+# Plugins
+plugins:
+  # Search plugin - enables search functionality
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+      lang: en
+  
+  # Git revision date plugin - shows last updated date (optional, requires git)
+  # Uncomment to enable (requires: pip install mkdocs-git-revision-date-localized-plugin)
+  # - git-revision-date-localized:
+  #     enable_creation_date: true
+  #     type: timeago
+  
+  # Minify plugin - minifies HTML (optional, for production)
+  # Uncomment to enable (requires: pip install mkdocs-minify-plugin)
+  # - minify:
+  #     minify_html: true
+  #     minify_js: true
+  #     minify_css: true
+  #     htmlmin_opts:
+  #       remove_comments: true
+
+# Markdown Extensions
+markdown_extensions:
+  # Python Markdown
+  - abbr                    # Abbreviations
+  - admonition             # Admonitions (notes, warnings, etc.)
+  - attr_list              # Attribute lists
+  - def_list               # Definition lists
+  - footnotes              # Footnotes
+  - md_in_html             # Markdown in HTML
+  - toc:                   # Table of contents
+      permalink: true
+      permalink_title: Anchor link to this section
+      toc_depth: 3
+  - tables                 # Tables support
+  
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:   # Math notation
+      generic: true
+  - pymdownx.betterem:     # Better emphasis
+      smart_enable: all
+  - pymdownx.caret         # Superscript and insert
+  - pymdownx.details       # Collapsible details
+  - pymdownx.emoji:        # Emoji support
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:    # Syntax highlighting
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      use_pygments: true
+  - pymdownx.inlinehilite  # Inline code highlighting
+  - pymdownx.keys          # Keyboard keys
+  - pymdownx.mark          # Text highlighting
+  - pymdownx.smartsymbols  # Smart symbols
+  - pymdownx.snippets      # Include external files
+  - pymdownx.superfences:  # Code blocks and diagrams
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:       # Tabbed content
+      alternate_style: true
+  - pymdownx.tasklist:     # Task lists
+      custom_checkbox: true
+  - pymdownx.tilde         # Strikethrough and subscript
+
+# Extra Configuration
+extra:
+  # Analytics (optional - add your Google Analytics ID)
+  # analytics:
+  #   provider: google
+  #   property: G-XXXXXXXXXX
+  
+  # Social links
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yourusername/cli-tool
+      name: GitHub Repository
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/yourusername
+      name: Follow on Twitter
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/yourusername
+      name: Connect on LinkedIn
+  
+  # Version selector (for multi-version documentation)
+  # Uncomment and configure if using mike for versioning
+  # version:
+  #   provider: mike
+  #   default: latest
+  
+  # Announcement bar (optional)
+  # Uncomment to show an announcement at the top of every page
+  # announcement:
+  #   text: >-
+  #     🎉 <b>New version 2.0 is now available!</b>
+  #     Check out the <a href="/changelog/">changelog</a> for details.
+
+# Extra CSS and JavaScript (optional)
+# Uncomment to add custom styling or scripts
+# extra_css:
+#   - stylesheets/extra.css
+# extra_javascript:
+#   - javascripts/extra.js
+
+# Validation
+validation:
+  nav:
+    omitted_files: info
+    not_found: warn
+    absolute_links: info
+  links:
+    not_found: warn
+    absolute_links: info
+    unrecognized_links: info
+
+# Watch additional directories (optional)
+# Useful during development
+# watch:
+#   - includes
+
+# Strict mode - fail on warnings (useful for CI/CD)
+# Uncomment for strict validation
+# strict: true
