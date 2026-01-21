@@ -93,7 +93,6 @@ nav:
   - Home: index.md
   - Getting Started: getting-started.md
   - Commands:
-      - Overview: commands/init.md
       - init: commands/init.md
       - deploy: commands/deploy.md
       - status: commands/status.md
